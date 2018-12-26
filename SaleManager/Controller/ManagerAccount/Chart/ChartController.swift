@@ -24,8 +24,10 @@ class ChartController {
         // добавить поля Double и Date с ценой и предать их в график
         
         for i in 0..<value.count {
+            
             let entry = BarChartDataEntry(x: Double(i), y: Double(value[i]))
             
+            print(entry)
             dataEntries.append(entry)
         }
         view.xAxis.valueFormatter = IndexAxisValueFormatter(values: mounth)
