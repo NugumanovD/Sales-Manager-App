@@ -19,9 +19,13 @@ class SalesListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.barTintColor = .clear
         worker.getDataSales(tableView: mainTable)
         
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     
@@ -44,7 +48,8 @@ extension SalesListController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
+            worker.deletDataSales(indexPath: indexPath)
+            tableView.reloadData()
         }
     }
     

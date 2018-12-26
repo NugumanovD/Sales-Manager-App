@@ -82,7 +82,7 @@ class ManagerAccountController: UIViewController {
                 if let snapshot = child as? DataSnapshot,
                     let allItem = Sales(snapshot: snapshot) {
                     newItems.append(allItem)
-                    print(allItem.post)
+                    print(allItem.key)
                 }
             }
         })

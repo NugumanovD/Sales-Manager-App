@@ -11,7 +11,7 @@ import Charts
 
 class ChartController {
     
-
+    let worker = FireBaseWorker()
     @IBOutlet weak var barChartView: BarChartView!
     
     func drawChart(_ view: BarChartView) {
@@ -20,6 +20,9 @@ class ChartController {
         
         let mounth = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
         let value = [10000, 2000, 24000, 6120, 4123, 10200, 12900, 4000]
+        
+        // добавить поля Double и Date с ценой и предать их в график
+        
         for i in 0..<value.count {
             let entry = BarChartDataEntry(x: Double(i), y: Double(value[i]))
             
