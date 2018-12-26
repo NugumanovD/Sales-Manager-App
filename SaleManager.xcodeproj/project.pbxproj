@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0412C53321C58C1500D1774E /* SalesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C53221C58C1500D1774E /* SalesListController.swift */; };
+		0412C53521C58C2600D1774E /* SalesListController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0412C53421C58C2600D1774E /* SalesListController.storyboard */; };
+		0419273F21C2E137003CC11D /* Sales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0419273E21C2E136003CC11D /* Sales.swift */; };
+		0427342621BD4BA6004B1FCC /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427342521BD4BA6004B1FCC /* Status.swift */; };
+		042D9A5E21AB26C900F62A9E /* TapBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D9A5D21AB26C900F62A9E /* TapBarContoller.swift */; };
+		0433141021AB0B930001A93C /* ProductCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433140F21AB0B930001A93C /* ProductCellCustom.swift */; };
+		043403A521A9D9B700F7AAE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043403A421A9D9B700F7AAE1 /* AppDelegate.swift */; };
+		043403A721A9D9B700F7AAE1 /* ProductController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043403A621A9D9B700F7AAE1 /* ProductController.swift */; };
+		043403AA21A9D9B700F7AAE1 /* ProductController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043403A821A9D9B700F7AAE1 /* ProductController.storyboard */; };
+		043403AF21A9D9B800F7AAE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043403AD21A9D9B800F7AAE1 /* LaunchScreen.storyboard */; };
+		04501A6221B431D0000A0C18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04501A6121B431D0000A0C18 /* LoginViewController.swift */; };
+		04501A6421B431D8000A0C18 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04501A6321B431D8000A0C18 /* RegisterViewController.swift */; };
+		04501A6621B4324E000A0C18 /* NetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04501A6521B4324E000A0C18 /* NetWorker.swift */; };
+		04501A6821B43A63000A0C18 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04501A6721B43A63000A0C18 /* AuthStoryboard.storyboard */; };
+		04501A6E21B46B2B000A0C18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04501A6D21B46B2B000A0C18 /* Assets.xcassets */; };
+		0453441621B85D3000660788 /* FireBaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453441521B85D3000660788 /* FireBaseWorker.swift */; };
+		04B3732121C18796003B52C5 /* NewSaleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3732021C18796003B52C5 /* NewSaleController.swift */; };
+		04B39EB721C038A30092EEF3 /* NewSaleController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B39EB621C038A30092EEF3 /* NewSaleController.storyboard */; };
+		04B7588821BC423A00ED98C7 /* MainBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7588721BC423A00ED98C7 /* MainBase.swift */; };
+		04B7588B21BC48E400ED98C7 /* MyAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7588A21BC48E400ED98C7 /* MyAccountController.swift */; };
+		04B7589121BC4DBF00ED98C7 /* MyAccountController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B7589021BC4DBF00ED98C7 /* MyAccountController.storyboard */; };
+		04B7589321BC5AD700ED98C7 /* AuthStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7589221BC5AD700ED98C7 /* AuthStoryboard.swift */; };
+		04BDC1AB21ADCD4600D9530E /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BDC1AA21ADCD4600D9530E /* TabBarController.storyboard */; };
+		04ED987D21BD76C4003488AC /* ManagerAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED987C21BD76C4003488AC /* ManagerAccountController.swift */; };
+		04ED987F21BD76E1003488AC /* ManagerAccountController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ED987E21BD76E1003488AC /* ManagerAccountController.storyboard */; };
+		484F1EB68468633B5329C86F /* Pods_SaleManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F776999EA75D7D0BEFBF143B /* Pods_SaleManager.framework */; };
+		7B65EC0621CEB490005E913E /* ChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65EC0521CEB490005E913E /* ChartController.swift */; };
+		7B7E934F21D3A11300F96C85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E934E21D3A11300F96C85 /* GoogleService-Info.plist */; };
+		7BF6D7A421C7C9B700723AB0 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6D7A321C7C9B700723AB0 /* Global.swift */; };
+		7BF6D7A621C7CC6300723AB0 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF6D7A521C7CC6300723AB0 /* UIViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0412C53221C58C1500D1774E /* SalesListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesListController.swift; sourceTree = "<group>"; };
+		0412C53421C58C2600D1774E /* SalesListController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SalesListController.storyboard; sourceTree = "<group>"; };
+		0419273E21C2E136003CC11D /* Sales.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sales.swift; sourceTree = "<group>"; };
+		0427342521BD4BA6004B1FCC /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		042D9A5D21AB26C900F62A9E /* TapBarContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapBarContoller.swift; sourceTree = "<group>"; };
+		0433140F21AB0B930001A93C /* ProductCellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellCustom.swift; sourceTree = "<group>"; };
+		043403A121A9D9B700F7AAE1 /* SaleManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaleManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		043403A421A9D9B700F7AAE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		043403A621A9D9B700F7AAE1 /* ProductController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductController.swift; sourceTree = "<group>"; };
+		043403A921A9D9B700F7AAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProductController.storyboard; sourceTree = "<group>"; };
+		043403AE21A9D9B800F7AAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		043403B021A9D9B800F7AAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04501A6121B431D0000A0C18 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04501A6321B431D8000A0C18 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		04501A6521B4324E000A0C18 /* NetWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorker.swift; sourceTree = "<group>"; };
+		04501A6721B43A63000A0C18 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
+		04501A6D21B46B2B000A0C18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0453441521B85D3000660788 /* FireBaseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseWorker.swift; sourceTree = "<group>"; };
+		04B3732021C18796003B52C5 /* NewSaleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSaleController.swift; sourceTree = "<group>"; };
+		04B39EB621C038A30092EEF3 /* NewSaleController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewSaleController.storyboard; sourceTree = "<group>"; };
+		04B7588721BC423A00ED98C7 /* MainBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBase.swift; sourceTree = "<group>"; };
+		04B7588921BC435D00ED98C7 /* SaleManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SaleManager.entitlements; sourceTree = "<group>"; };
+		04B7588A21BC48E400ED98C7 /* MyAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountController.swift; sourceTree = "<group>"; };
+		04B7589021BC4DBF00ED98C7 /* MyAccountController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyAccountController.storyboard; sourceTree = "<group>"; };
+		04B7589221BC5AD700ED98C7 /* AuthStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStoryboard.swift; sourceTree = "<group>"; };
+		04BDC1AA21ADCD4600D9530E /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		04ED987C21BD76C4003488AC /* ManagerAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAccountController.swift; sourceTree = "<group>"; };
+		04ED987E21BD76E1003488AC /* ManagerAccountController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManagerAccountController.storyboard; sourceTree = "<group>"; };
+		1ECD2F3797C91EED084E19C6 /* Pods-SaleManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaleManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaleManager/Pods-SaleManager.release.xcconfig"; sourceTree = "<group>"; };
+		7B65EC0521CEB490005E913E /* ChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartController.swift; sourceTree = "<group>"; };
+		7B7E934E21D3A11300F96C85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7BF6D7A321C7C9B700723AB0 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		7BF6D7A521C7CC6300723AB0 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		EDDCE85BA6B40D774A78E054 /* Pods-SaleManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaleManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SaleManager/Pods-SaleManager.debug.xcconfig"; sourceTree = "<group>"; };
+		F776999EA75D7D0BEFBF143B /* Pods_SaleManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SaleManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0434039E21A9D9B700F7AAE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				484F1EB68468633B5329C86F /* Pods_SaleManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0412C53621C58C3800D1774E /* Sales List */ = {
+			isa = PBXGroup;
+			children = (
+				0412C53221C58C1500D1774E /* SalesListController.swift */,
+				0412C53421C58C2600D1774E /* SalesListController.storyboard */,
+			);
+			path = "Sales List";
+			sourceTree = "<group>";
+		};
+		042D9A5F21AB26CF00F62A9E /* Main Controller */ = {
+			isa = PBXGroup;
+			children = (
+				042D9A5D21AB26C900F62A9E /* TapBarContoller.swift */,
+				04BDC1AA21ADCD4600D9530E /* TabBarController.storyboard */,
+			);
+			path = "Main Controller";
+			sourceTree = "<group>";
+		};
+		0434039821A9D9B700F7AAE1 = {
+			isa = PBXGroup;
+			children = (
+				043403A321A9D9B700F7AAE1 /* SaleManager */,
+				043403A221A9D9B700F7AAE1 /* Products */,
+				7C97485EBEF521D02688ACFB /* Pods */,
+				70BEB21D1B4B56F307A9A7E2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		043403A221A9D9B700F7AAE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				043403A121A9D9B700F7AAE1 /* SaleManager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		043403A321A9D9B700F7AAE1 /* SaleManager */ = {
+			isa = PBXGroup;
+			children = (
+				04B7588921BC435D00ED98C7 /* SaleManager.entitlements */,
+				04B7588521BC41CE00ED98C7 /* Model */,
+				04FEA64421AC7A910000CE73 /* Service */,
+				04B7588621BC41E700ED98C7 /* Controller */,
+				044C89B021AB0E6600D7A207 /* Supporting files */,
+			);
+			path = SaleManager;
+			sourceTree = "<group>";
+		};
+		044C89AD21AB0E1700D7A207 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				043403A621A9D9B700F7AAE1 /* ProductController.swift */,
+				0433140F21AB0B930001A93C /* ProductCellCustom.swift */,
+				043403A821A9D9B700F7AAE1 /* ProductController.storyboard */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		044C89B021AB0E6600D7A207 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				043403A421A9D9B700F7AAE1 /* AppDelegate.swift */,
+				7B7E934E21D3A11300F96C85 /* GoogleService-Info.plist */,
+				043403AD21A9D9B800F7AAE1 /* LaunchScreen.storyboard */,
+				04501A6D21B46B2B000A0C18 /* Assets.xcassets */,
+				043403B021A9D9B800F7AAE1 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		04501A6021B4318C000A0C18 /* Auth Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04B7589221BC5AD700ED98C7 /* AuthStoryboard.swift */,
+				04501A6121B431D0000A0C18 /* LoginViewController.swift */,
+				04501A6321B431D8000A0C18 /* RegisterViewController.swift */,
+				04501A6721B43A63000A0C18 /* AuthStoryboard.storyboard */,
+			);
+			path = "Auth Controller";
+			sourceTree = "<group>";
+		};
+		04B39EB821C038C70092EEF3 /* NewSale */ = {
+			isa = PBXGroup;
+			children = (
+				04B3732021C18796003B52C5 /* NewSaleController.swift */,
+				04B39EB621C038A30092EEF3 /* NewSaleController.storyboard */,
+			);
+			path = NewSale;
+			sourceTree = "<group>";
+		};
+		04B7588521BC41CE00ED98C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04B7588721BC423A00ED98C7 /* MainBase.swift */,
+				0427342521BD4BA6004B1FCC /* Status.swift */,
+				0419273E21C2E136003CC11D /* Sales.swift */,
+				7BF6D7A321C7C9B700723AB0 /* Global.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04B7588621BC41E700ED98C7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7BF6D7A721C7CC6C00723AB0 /* Extension */,
+				042D9A5F21AB26CF00F62A9E /* Main Controller */,
+				044C89AD21AB0E1700D7A207 /* Product */,
+				04B7588C21BC48EA00ED98C7 /* MyAccount */,
+				04B7588F21BC4A1E00ED98C7 /* ManagerAccount */,
+				0412C53621C58C3800D1774E /* Sales List */,
+				04B39EB821C038C70092EEF3 /* NewSale */,
+				04501A6021B4318C000A0C18 /* Auth Controller */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04B7588C21BC48EA00ED98C7 /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				04B7588A21BC48E400ED98C7 /* MyAccountController.swift */,
+				04B7589021BC4DBF00ED98C7 /* MyAccountController.storyboard */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		04B7588F21BC4A1E00ED98C7 /* ManagerAccount */ = {
+			isa = PBXGroup;
+			children = (
+				04ED987C21BD76C4003488AC /* ManagerAccountController.swift */,
+				04ED987E21BD76E1003488AC /* ManagerAccountController.storyboard */,
+				7B65EC0721CEB495005E913E /* Chart */,
+			);
+			path = ManagerAccount;
+			sourceTree = "<group>";
+		};
+		04FEA64421AC7A910000CE73 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0453441521B85D3000660788 /* FireBaseWorker.swift */,
+				04501A6521B4324E000A0C18 /* NetWorker.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		70BEB21D1B4B56F307A9A7E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F776999EA75D7D0BEFBF143B /* Pods_SaleManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B65EC0721CEB495005E913E /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				7B65EC0521CEB490005E913E /* ChartController.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		7BF6D7A721C7CC6C00723AB0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7BF6D7A521C7CC6300723AB0 /* UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7C97485EBEF521D02688ACFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDDCE85BA6B40D774A78E054 /* Pods-SaleManager.debug.xcconfig */,
+				1ECD2F3797C91EED084E19C6 /* Pods-SaleManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		043403A021A9D9B700F7AAE1 /* SaleManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 043403B321A9D9B800F7AAE1 /* Build configuration list for PBXNativeTarget "SaleManager" */;
+			buildPhases = (
+				82107F92B624E047A062EA7C /* [CP] Check Pods Manifest.lock */,
+				0434039D21A9D9B700F7AAE1 /* Sources */,
+				0434039E21A9D9B700F7AAE1 /* Frameworks */,
+				0434039F21A9D9B700F7AAE1 /* Resources */,
+				C8E6AC31D7C78DDB77C1E67D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SaleManager;
+			productName = SaleManager;
+			productReference = 043403A121A9D9B700F7AAE1 /* SaleManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0434039921A9D9B700F7AAE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = com.sales.my;
+				TargetAttributes = {
+					043403A021A9D9B700F7AAE1 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 0434039C21A9D9B700F7AAE1 /* Build configuration list for PBXProject "SaleManager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0434039821A9D9B700F7AAE1;
+			productRefGroup = 043403A221A9D9B700F7AAE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				043403A021A9D9B700F7AAE1 /* SaleManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0434039F21A9D9B700F7AAE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04ED987F21BD76E1003488AC /* ManagerAccountController.storyboard in Resources */,
+				043403AF21A9D9B800F7AAE1 /* LaunchScreen.storyboard in Resources */,
+				04BDC1AB21ADCD4600D9530E /* TabBarController.storyboard in Resources */,
+				043403AA21A9D9B700F7AAE1 /* ProductController.storyboard in Resources */,
+				04501A6E21B46B2B000A0C18 /* Assets.xcassets in Resources */,
+				04B7589121BC4DBF00ED98C7 /* MyAccountController.storyboard in Resources */,
+				04B39EB721C038A30092EEF3 /* NewSaleController.storyboard in Resources */,
+				7B7E934F21D3A11300F96C85 /* GoogleService-Info.plist in Resources */,
+				04501A6821B43A63000A0C18 /* AuthStoryboard.storyboard in Resources */,
+				0412C53521C58C2600D1774E /* SalesListController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82107F92B624E047A062EA7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SaleManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8E6AC31D7C78DDB77C1E67D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SaleManager/Pods-SaleManager-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SaleManager/Pods-SaleManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0434039D21A9D9B700F7AAE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B65EC0621CEB490005E913E /* ChartController.swift in Sources */,
+				04501A6421B431D8000A0C18 /* RegisterViewController.swift in Sources */,
+				04B7588B21BC48E400ED98C7 /* MyAccountController.swift in Sources */,
+				042D9A5E21AB26C900F62A9E /* TapBarContoller.swift in Sources */,
+				04B3732121C18796003B52C5 /* NewSaleController.swift in Sources */,
+				043403A721A9D9B700F7AAE1 /* ProductController.swift in Sources */,
+				0419273F21C2E137003CC11D /* Sales.swift in Sources */,
+				043403A521A9D9B700F7AAE1 /* AppDelegate.swift in Sources */,
+				04B7589321BC5AD700ED98C7 /* AuthStoryboard.swift in Sources */,
+				04B7588821BC423A00ED98C7 /* MainBase.swift in Sources */,
+				7BF6D7A621C7CC6300723AB0 /* UIViewController.swift in Sources */,
+				0427342621BD4BA6004B1FCC /* Status.swift in Sources */,
+				04501A6221B431D0000A0C18 /* LoginViewController.swift in Sources */,
+				04501A6621B4324E000A0C18 /* NetWorker.swift in Sources */,
+				0412C53321C58C1500D1774E /* SalesListController.swift in Sources */,
+				04ED987D21BD76C4003488AC /* ManagerAccountController.swift in Sources */,
+				0433141021AB0B930001A93C /* ProductCellCustom.swift in Sources */,
+				0453441621B85D3000660788 /* FireBaseWorker.swift in Sources */,
+				7BF6D7A421C7C9B700723AB0 /* Global.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		043403A821A9D9B700F7AAE1 /* ProductController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				043403A921A9D9B700F7AAE1 /* Base */,
+			);
+			name = ProductController.storyboard;
+			sourceTree = "<group>";
+		};
+		043403AD21A9D9B800F7AAE1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				043403AE21A9D9B800F7AAE1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		043403B121A9D9B800F7AAE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		043403B221A9D9B800F7AAE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		043403B421A9D9B800F7AAE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDDCE85BA6B40D774A78E054 /* Pods-SaleManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5P369B9Z7K;
+				INFOPLIST_FILE = "$(SRCROOT)/SaleManager/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nugumanovDmitry.SaleManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		043403B521A9D9B800F7AAE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ECD2F3797C91EED084E19C6 /* Pods-SaleManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5P369B9Z7K;
+				INFOPLIST_FILE = "$(SRCROOT)/SaleManager/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nugumanovDmitry.SaleManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0434039C21A9D9B700F7AAE1 /* Build configuration list for PBXProject "SaleManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043403B121A9D9B800F7AAE1 /* Debug */,
+				043403B221A9D9B800F7AAE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		043403B321A9D9B800F7AAE1 /* Build configuration list for PBXNativeTarget "SaleManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				043403B421A9D9B800F7AAE1 /* Debug */,
+				043403B521A9D9B800F7AAE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0434039921A9D9B700F7AAE1 /* Project object */;
+}
