@@ -92,10 +92,10 @@ class ManagerAccountController: UITableViewController {
         signOut()
     }
     
-    // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.textLabel?.text = "xz"
-    }
+//    // MARK: - Table view data source
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        cell.textLabel?.text = "xz"
+//    }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
