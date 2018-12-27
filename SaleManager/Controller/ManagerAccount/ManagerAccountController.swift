@@ -11,13 +11,18 @@ import UIKit
 import Firebase
 import Charts
 
-class ManagerAccountController: UIViewController {
+class ManagerAccountController: UITableViewController {
     
-    let chart = ChartController()
+    // MARK: Interface outlets
     
     @IBOutlet weak var chartView: BarChartView!
     
+    // MARK: Instance variables/constants
+    
     let fireBaseWorker = FireBaseWorker()
+    let chart = ChartController()
+    
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +30,12 @@ class ManagerAccountController: UIViewController {
         fireBaseWorker.chartDB()
         chartView.contentMode = .scaleAspectFit
         getData()
-        
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //userCheck()
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -40,21 +43,12 @@ class ManagerAccountController: UIViewController {
         chart.drawChart(chartView)
     }
     
+    //MARK: Configurations
     
-    @IBAction func SaleList(_ sender: Any) {
-        transitionToViewController(name: "SalesListController")
-    }
-    @IBAction func NewSale(_ sender: Any) {
-        transitionToViewController(name: "NewSaleController")
-    }
-    @IBAction func signOutButton(_ sender: Any) {
-        signOut()
-    }
     func signOut() {
         do {
             try Auth.auth().signOut()
             Status.shared.loginStatus = false
-            
             transitionToViewController(name: "AuthStoryboard")
         } catch (let error) {
             print("Auth sign out failed: \(error)")
@@ -62,12 +56,10 @@ class ManagerAccountController: UIViewController {
     }
     
     func userCheck() {
-        //Auth.auth().addStateDidChangeListener() { auth, user in
         if Status.shared.loginStatus {
             print("MyAccount Логин получен")
         } else {
             print("MyAccount Пользователя с таким логином нет, идем на регистрацию")
-            
             transitionToViewController(name: "AuthStoryboard")
         }
     }
@@ -87,6 +79,49 @@ class ManagerAccountController: UIViewController {
             }
         })
     }
+    
+    //MARK: Action funcs
+    
+    @IBAction func SaleList(_ sender: Any) {
+        transitionToViewController(name: "SalesListController")
+    }
+    @IBAction func NewSale(_ sender: Any) {
+        transitionToViewController(name: "NewSaleController")
+    }
+    @IBAction func signOutButton(_ sender: Any) {
+        signOut()
+    }
+    
+    // MARK: - Table view data source
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.textLabel?.text = "xz"
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+        
+        if indexPath.section == 1 && indexPath.row == 0 {
+            transitionToViewController(name: "NewSaleController")
+        }
+        if indexPath.section == 1 && indexPath.row == 1 {
+            transitionToViewController(name: "SalesListController")
+        }
+        
+        if indexPath.section == 2 && indexPath.row == 0 {
+            //TODO: Need to make a question!
+            signOut()
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    // MARK: - Navigation
+    
     
     
 }
