@@ -2,7 +2,7 @@
 //  ManagerAccountController.swift
 //  SaleManager
 //
-//  Created by Mac on 09.12.2018.
+//  Created by Evgeniy Opryshko on 09.12.2018.
 //  Copyright © 2018 com.sales.my. All rights reserved.
 //
 
@@ -83,7 +83,10 @@ class ManagerAccountController: UITableViewController {
     //MARK: Action funcs
     
     @IBAction func SaleList(_ sender: Any) {
-        transitionToViewController(name: "SalesListController")
+       // transitionToViewController(name: "SalesListController")
+        let secondViewController:UIViewController = UIViewController()
+        let next = secondViewController
+        self.present(next, animated: true, completion: nil)
     }
     @IBAction func NewSale(_ sender: Any) {
         transitionToViewController(name: "NewSaleController")

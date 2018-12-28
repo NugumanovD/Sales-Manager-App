@@ -6,80 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="alV-6j-Chq">
-            <objects>
-                <viewController id="ijX-rK-hYH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S7z-cm-eZi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dNb-xf-bQw">
-                                <rect key="frame" x="0.0" y="229" width="375" height="400"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="3N5-D0-krL"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Pia-tx-SWw">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pia-tx-SWw" id="u4h-ua-DxK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGq-gJ-2pV">
-                                <rect key="frame" x="288" y="20" width="57" height="30"/>
-                                <state key="normal" title="Sign out"/>
-                                <connections>
-                                    <action selector="signOutButton:" destination="ijX-rK-hYH" eventType="touchUpInside" id="5ow-zq-rus"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgD-H1-Q72">
-                                <rect key="frame" x="16" y="36" width="131" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <state key="normal" title="Создать накладную"/>
-                                <connections>
-                                    <action selector="NewSale:" destination="ijX-rK-hYH" eventType="touchUpInside" id="n3m-ke-HtT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLh-nC-Uwt">
-                                <rect key="frame" x="164" y="36" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="SaleList:" destination="ijX-rK-hYH" eventType="touchUpInside" id="Wef-e1-kCM"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="dNb-xf-bQw" firstAttribute="leading" secondItem="U57-h4-M78" secondAttribute="leading" id="3up-dy-Ufb"/>
-                            <constraint firstItem="U57-h4-M78" firstAttribute="trailing" secondItem="dNb-xf-bQw" secondAttribute="trailing" id="6Yp-R4-auS"/>
-                            <constraint firstItem="zgD-H1-Q72" firstAttribute="leading" secondItem="U57-h4-M78" secondAttribute="leading" constant="16" id="CAr-uV-QfZ"/>
-                            <constraint firstItem="NGq-gJ-2pV" firstAttribute="leading" secondItem="JLh-nC-Uwt" secondAttribute="trailing" constant="78" id="DJx-gU-zAR"/>
-                            <constraint firstItem="NGq-gJ-2pV" firstAttribute="top" secondItem="U57-h4-M78" secondAttribute="top" id="Gvo-tH-eht"/>
-                            <constraint firstItem="U57-h4-M78" firstAttribute="trailing" secondItem="NGq-gJ-2pV" secondAttribute="trailing" constant="30" id="hRD-7U-UVb"/>
-                            <constraint firstItem="JLh-nC-Uwt" firstAttribute="top" secondItem="zgD-H1-Q72" secondAttribute="top" id="kXQ-C5-8cn"/>
-                            <constraint firstItem="JLh-nC-Uwt" firstAttribute="leading" secondItem="zgD-H1-Q72" secondAttribute="trailing" constant="17" id="oIk-YK-TvL"/>
-                            <constraint firstItem="JLh-nC-Uwt" firstAttribute="centerY" secondItem="zgD-H1-Q72" secondAttribute="centerY" id="vam-6J-zOr"/>
-                            <constraint firstItem="zgD-H1-Q72" firstAttribute="top" secondItem="U57-h4-M78" secondAttribute="top" constant="16" id="x9a-aJ-Lwd"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="U57-h4-M78"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="TAB-PR-XGb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Suo-Tj-AMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-716" y="38"/>
-        </scene>
         <!--Manager Account Controller-->
         <scene sceneID="zwg-RJ-KAt">
             <objects>
@@ -243,7 +172,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXV-SN-8ZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="22"/>
+            <point key="canvasLocation" x="-495" y="25"/>
         </scene>
     </scenes>
 </document>
