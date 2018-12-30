@@ -26,7 +26,7 @@ class ManagerAccountController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userCheck()
+        //userCheck()
         fireBaseWorker.chartDB()
         chartView.contentMode = .scaleAspectFit
         getData()
@@ -39,7 +39,7 @@ class ManagerAccountController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        userCheck()
+        //userCheck()
         chart.drawChart(chartView)
     }
     
@@ -83,10 +83,7 @@ class ManagerAccountController: UITableViewController {
     //MARK: Action funcs
     
     @IBAction func SaleList(_ sender: Any) {
-       // transitionToViewController(name: "SalesListController")
-        let secondViewController:UIViewController = UIViewController()
-        let next = secondViewController
-        self.present(next, animated: true, completion: nil)
+      // transitionToViewController(name: "SalesListController")
     }
     @IBAction func NewSale(_ sender: Any) {
         transitionToViewController(name: "NewSaleController")
@@ -105,7 +102,10 @@ class ManagerAccountController: UITableViewController {
         print(indexPath)
         
         if indexPath.section == 1 && indexPath.row == 0 {
-            transitionToViewController(name: "NewSaleController")
+            //transitionToViewController(name: "NewSaleController")
+            let storyboard = UIStoryboard(name: "NewSaleController", bundle: nil)
+            let secondVC = storyboard.instantiateViewController(withIdentifier: "NewSaleController") as! NewSaleController
+            self.navigationController?.pushViewController(secondVC, animated: true)
         }
         if indexPath.section == 1 && indexPath.row == 1 {
             transitionToViewController(name: "SalesListController")

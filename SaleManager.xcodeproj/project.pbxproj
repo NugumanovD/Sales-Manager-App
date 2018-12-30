@@ -33,6 +33,8 @@
 		04ED987D21BD76C4003488AC /* ManagerAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED987C21BD76C4003488AC /* ManagerAccountController.swift */; };
 		04ED987F21BD76E1003488AC /* ManagerAccountController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04ED987E21BD76E1003488AC /* ManagerAccountController.storyboard */; };
 		484F1EB68468633B5329C86F /* Pods_SaleManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F776999EA75D7D0BEFBF143B /* Pods_SaleManager.framework */; };
+		4905050021D949C000060FD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490504FF21D949C000060FD7 /* ViewController.swift */; };
+		4905050221D949D200060FD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905050121D949D200060FD7 /* Main.storyboard */; };
 		7B4BE9AB21D575C600259DC2 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BE9AA21D575C600259DC2 /* Mark.swift */; };
 		7B65EC0621CEB490005E913E /* ChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65EC0521CEB490005E913E /* ChartController.swift */; };
 		7B7E934F21D3A11300F96C85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E934E21D3A11300F96C85 /* GoogleService-Info.plist */; };
@@ -70,6 +72,8 @@
 		04ED987C21BD76C4003488AC /* ManagerAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAccountController.swift; sourceTree = "<group>"; };
 		04ED987E21BD76E1003488AC /* ManagerAccountController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManagerAccountController.storyboard; sourceTree = "<group>"; };
 		1ECD2F3797C91EED084E19C6 /* Pods-SaleManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaleManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaleManager/Pods-SaleManager.release.xcconfig"; sourceTree = "<group>"; };
+		490504FF21D949C000060FD7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4905050121D949D200060FD7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7B4BE9AA21D575C600259DC2 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
 		7B65EC0521CEB490005E913E /* ChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartController.swift; sourceTree = "<group>"; };
 		7B7E934E21D3A11300F96C85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 			children = (
 				042D9A5D21AB26C900F62A9E /* TapBarContoller.swift */,
 				04BDC1AA21ADCD4600D9530E /* TabBarController.storyboard */,
+				490504FF21D949C000060FD7 /* ViewController.swift */,
+				4905050121D949D200060FD7 /* Main.storyboard */,
 			);
 			path = "Main Controller";
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 				04BDC1AB21ADCD4600D9530E /* TabBarController.storyboard in Resources */,
 				043403AA21A9D9B700F7AAE1 /* ProductController.storyboard in Resources */,
 				04501A6E21B46B2B000A0C18 /* Assets.xcassets in Resources */,
+				4905050221D949D200060FD7 /* Main.storyboard in Resources */,
 				04B7589121BC4DBF00ED98C7 /* MyAccountController.storyboard in Resources */,
 				04B39EB721C038A30092EEF3 /* NewSaleController.storyboard in Resources */,
 				7B7E934F21D3A11300F96C85 /* GoogleService-Info.plist in Resources */,
@@ -419,6 +426,7 @@
 				0412C53321C58C1500D1774E /* SalesListController.swift in Sources */,
 				04ED987D21BD76C4003488AC /* ManagerAccountController.swift in Sources */,
 				0433141021AB0B930001A93C /* ProductCellCustom.swift in Sources */,
+				4905050021D949C000060FD7 /* ViewController.swift in Sources */,
 				0453441621B85D3000660788 /* FireBaseWorker.swift in Sources */,
 				7BF6D7A421C7C9B700723AB0 /* Global.swift in Sources */,
 			);

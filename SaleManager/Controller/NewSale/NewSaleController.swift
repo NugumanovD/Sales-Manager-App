@@ -29,9 +29,7 @@ class NewSaleController: UITableViewController {
     }
     
     func setupNavigationBar() {
-        navigationController?.navigationBar.barTintColor = .white
-        let backItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(back))
-        self.navigationItem.leftBarButtonItem = backItem
+    navigationController?.navigationBar.barTintColor = .white
     }
     
     @objc func back() {
