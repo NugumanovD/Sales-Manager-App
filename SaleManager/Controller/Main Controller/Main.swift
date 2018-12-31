@@ -1,39 +1,53 @@
 //
-//  ViewController.swift
-//  UITabBarController-Tutorial
+//  ManagerAccountController.swift
+//  SaleManager
 //
-//  Created by Aman Aggarwal on 12/26/17.
-//  Copyright © 2017 iostutorialjunction.com. All rights reserved.
+//  Created by Evgeniy Opryshko on 09.12.2018.
+//  Copyright © 2018 com.sales.my. All rights reserved.
 //
 
 import UIKit
 
 class Main: UIViewController {
-
+    
     let tabBarCnt = UITabBarController()
+    var startIndex = 1
+    lazy var worker = FireBaseWorker()
+    
+    
+    //MARK: UIViewController lifecycle
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("1")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("2")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("3")
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        tabBarCnt.tabBar.tintColor = UIColor.black
+        //worker.userCheck()
         createTabBarController()
-        
-        //tabBarCnt.selectedIndex = 0
+        //tabBarCnt.selectedIndex = startIndex
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-      func createTabBarController() {
     
-//        let firstVc = UIViewController()
-//        firstVc.title = "First"
-//        firstVc.view.backgroundColor =  UIColor.red
-//        firstVc.tabBarItem = UITabBarItem.init(title: "Home", image: UIImage(named: "HomeTab"), tag: 0)
-        
+
+    func createTabBarController() {
+    
         let product = createNavController(storyboard: "ProductController", identifier: "ProductController")
         product.tabBarItem.image = UIImage(named: "shopping")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         product.tabBarItem.selectedImage = UIImage(named: "shoppingSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
@@ -43,7 +57,7 @@ class Main: UIViewController {
         manager.tabBarItem.image = UIImage(named: "profile")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         manager.tabBarItem.selectedImage = UIImage(named: "profileSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         manager.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
-
+        
         let controllerArray = [product, manager]
         tabBarCnt.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
         

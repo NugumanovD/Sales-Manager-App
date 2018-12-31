@@ -18,7 +18,7 @@ class ManagerAccountController: UITableViewController {
     @IBOutlet weak var chartView: BarChartView!
     
     // MARK: Instance variables/constants
-    
+    //let worker = FireBaseWorker()
     let fireBaseWorker = FireBaseWorker()
     let chart = ChartController()
     
@@ -29,7 +29,6 @@ class ManagerAccountController: UITableViewController {
         //userCheck()
         fireBaseWorker.chartDB()
         chartView.contentMode = .scaleAspectFit
-        getData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,79 +44,44 @@ class ManagerAccountController: UITableViewController {
     
     //MARK: Configurations
     
-    func signOut() {
-        do {
-            try Auth.auth().signOut()
-            Status.shared.loginStatus = false
-            transitionToViewController(name: "AuthStoryboard")
-        } catch (let error) {
-            print("Auth sign out failed: \(error)")
-        }
-    }
     
-    func userCheck() {
-        if Status.shared.loginStatus {
-            print("MyAccount Логин получен")
-        } else {
-            print("MyAccount Пользователя с таким логином нет, идем на регистрацию")
-            transitionToViewController(name: "AuthStoryboard")
-        }
-    }
     
-    func getData() {
-        let worker = fireBaseWorker.salesRef
-        print(worker)
-        
-        worker.observe(.value, with: { snapshot in
-            var newItems: [Sales] = []
-            for child in snapshot.children {
-                if let snapshot = child as? DataSnapshot,
-                    let allItem = Sales(snapshot: snapshot) {
-                    newItems.append(allItem)
-                    print(allItem.key)
-                }
-            }
-        })
-    }
+    
     
     //MARK: Action funcs
     
-    @IBAction func SaleList(_ sender: Any) {
-      // transitionToViewController(name: "SalesListController")
-    }
-    @IBAction func NewSale(_ sender: Any) {
-        transitionToViewController(name: "NewSaleController")
-    }
-    @IBAction func signOutButton(_ sender: Any) {
-        signOut()
-    }
     
     // MARK: - Table view data source
-//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.textLabel?.text = "xz"
-//    }
+   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    
+    switch (indexPath.section, indexPath.row) {
+    case (1,0):
+        cell.textLabel?.text = "Создать накладную"
+    case (1,1):
+        cell.textLabel?.text = "Список продаж"
+    default:
+        print("Default")
+    }
+    
+    }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
         
-        if indexPath.section == 1 && indexPath.row == 0 {
-            //transitionToViewController(name: "NewSaleController")
+        switch (indexPath.section, indexPath.row) {
+        case (1,0):
             let storyboard = UIStoryboard(name: "NewSaleController", bundle: nil)
             let secondVC = storyboard.instantiateViewController(withIdentifier: "NewSaleController") as! NewSaleController
             self.navigationController?.pushViewController(secondVC, animated: true)
+        case (1,1):
+           transitionToViewController(name: "SalesListController")
+        case (2,0):
+            fireBaseWorker.signOut()
+        default:
+            print("Default")
         }
-        if indexPath.section == 1 && indexPath.row == 1 {
-            transitionToViewController(name: "SalesListController")
-        }
-        
-        if indexPath.section == 2 && indexPath.row == 0 {
-            //TODO: Need to make a question!
-            signOut()
-        }
-        
-        
-        
+   
     }
     
     
