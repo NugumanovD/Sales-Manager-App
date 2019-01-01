@@ -56,6 +56,8 @@ class NewSaleController: UITableViewController {
             print("Default")
         }
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     
     //MARK: Any other protocol

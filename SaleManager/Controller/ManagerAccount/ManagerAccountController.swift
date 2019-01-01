@@ -33,6 +33,7 @@ class ManagerAccountController: UITableViewController {
         
         fireBaseWorker.chartDB()
         chartView.contentMode = .scaleAspectFit
+        tableView.tableFooterView = UIView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,10 +81,9 @@ class ManagerAccountController: UITableViewController {
             print("Default")
         }
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
-    
-    
-    
     
     // MARK: - Navigation
     
