@@ -32,7 +32,7 @@ class Main: UIViewController {
         
         let manager = createNavController(controller: Controller.init(storyboard: "ManagerAccountController", identifier: "ManagerAccountController", image: "profile", selectedImage: "profileSelected"))
         
-        let login = createNavController(controller: Controller.init(storyboard: "AuthStoryboard", identifier: "AuthStoryboard", image: "profile", selectedImage: "profileSelected"))
+        let login = createNavController(controller: Controller.init(storyboard: "AuthStoryboard", identifier: "LoginViewController", image: "profile", selectedImage: "profileSelected"))
         
         Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
