@@ -18,28 +18,28 @@ class ManagerAccountController: UITableViewController {
     @IBOutlet weak var chartView: BarChartView!
     
     // MARK: Instance variables/constants
-    //let worker = FireBaseWorker()
     let fireBaseWorker = FireBaseWorker()
     let chart = ChartController()
     
     // MARK: Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //userCheck()
+        
         fireBaseWorker.chartDB()
         chartView.contentMode = .scaleAspectFit
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //userCheck()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //userCheck()
+        
         chart.drawChart(chartView)
+        
     }
     
     //MARK: Configurations
@@ -52,17 +52,17 @@ class ManagerAccountController: UITableViewController {
     
     
     // MARK: - Table view data source
-   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    
-    switch (indexPath.section, indexPath.row) {
-    case (1,0):
-        cell.textLabel?.text = "Создать накладную"
-    case (1,1):
-        cell.textLabel?.text = "Список продаж"
-    default:
-        print("Default")
-    }
-    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        switch (indexPath.section, indexPath.row) {
+        case (1,0):
+            cell.textLabel?.text = "Создать накладную"
+        case (1,1):
+            cell.textLabel?.text = "Список продаж"
+        default:
+            print("Default")
+        }
+        
     }
     
     
@@ -71,17 +71,15 @@ class ManagerAccountController: UITableViewController {
         
         switch (indexPath.section, indexPath.row) {
         case (1,0):
-            let storyboard = UIStoryboard(name: "NewSaleController", bundle: nil)
-            let secondVC = storyboard.instantiateViewController(withIdentifier: "NewSaleController") as! NewSaleController
-            self.navigationController?.pushViewController(secondVC, animated: true)
+            transitionPushToViewController(name: "NewSaleController")
         case (1,1):
-           transitionToViewController(name: "SalesListController")
+            transitionPushToViewController(name: "SalesListController")
         case (2,0):
             fireBaseWorker.signOut()
         default:
             print("Default")
         }
-   
+        
     }
     
     
