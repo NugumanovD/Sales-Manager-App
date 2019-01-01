@@ -1,75 +1,64 @@
 //
-//  ManagerAccountController.swift
-//  SaleManager
+//  Main.swift
 //
-//  Created by Evgeniy Opryshko on 09.12.2018.
-//  Copyright © 2018 com.sales.my. All rights reserved.
+//
+//  Created by Evgeniy Opryshko on 01/01/2019.
 //
 
 import UIKit
+import Firebase
 
 class Main: UIViewController {
     
-    let tabBarCnt = UITabBarController()
-    var startIndex = 1
-    lazy var worker = FireBaseWorker()
+     // MARK: Class variables/constants
     
+    let tabBarCnt = UITabBarController()
+    lazy var worker = FireBaseWorker()
     
     //MARK: UIViewController lifecycle
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("1")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("2")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("3")
-    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        //worker.userCheck()
+        
         createTabBarController()
-        //tabBarCnt.selectedIndex = startIndex
+        
     }
     
-
-    func createTabBarController() {
+    //MARK: Configurations
     
-        let product = createNavController(storyboard: "ProductController", identifier: "ProductController")
-        product.tabBarItem.image = UIImage(named: "shopping")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-        product.tabBarItem.selectedImage = UIImage(named: "shoppingSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-        product.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+    func createTabBarController() {
         
-        let manager = createNavController(storyboard: "ManagerAccountController", identifier: "ManagerAccountController")
-        manager.tabBarItem.image = UIImage(named: "profile")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-        manager.tabBarItem.selectedImage = UIImage(named: "profileSelected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-        manager.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        let product = createNavController(controller: Controller.init(storyboard: "ProductController", identifier: "ProductController", image: "shopping", selectedImage: "shoppingSelected"))
         
-        let controllerArray = [product, manager]
-        tabBarCnt.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
+        let manager = createNavController(controller: Controller.init(storyboard: "ManagerAccountController", identifier: "ManagerAccountController", image: "profile", selectedImage: "profileSelected"))
+        
+        let login = createNavController(controller: Controller.init(storyboard: "AuthStoryboard", identifier: "AuthStoryboard", image: "profile", selectedImage: "profileSelected"))
+        
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                let controllerArray = [product, manager]
+                self.tabBarCnt.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
+                print("controllerArray = [product, manager]")
+            } else {
+                let controllerArray = [product, login]
+                print("controllerArray = [product, login]")
+                self.tabBarCnt.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
+            }
+            
+        }
         
         self.view.addSubview(tabBarCnt.view)
     }
     
-    func createNavController(storyboard: String, identifier: String) -> UIViewController {
+    func createNavController(controller:Controller) -> UIViewController {
+        
         var viewController = UIViewController()
-        let storyboard = UIStoryboard(name: storyboard, bundle: nil)
-        viewController = storyboard.instantiateViewController(withIdentifier: identifier)
+        let storyboard = UIStoryboard(name: controller.storyboard, bundle: nil)
+        viewController = storyboard.instantiateViewController(withIdentifier: controller.identifier)
+        viewController.tabBarItem.image = UIImage(named: controller.image)?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        viewController.tabBarItem.selectedImage = UIImage(named: controller.selectedImage)?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        viewController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         return viewController
     }
     
 }
-
