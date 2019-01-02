@@ -33,6 +33,8 @@ class NewSaleController: UITableViewController {
         super.viewDidLoad()
         
         tabBarController?.tabBar.isHidden = true
+        tableView.customeStule(tableView: self.tableView)
+       
     }
     
     //MARK: Configurations
@@ -44,6 +46,18 @@ class NewSaleController: UITableViewController {
     
     
     //MARK: AnyProtocol (ex. UITableViewDelegate)
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        switch (indexPath.section, indexPath.row) {
+        case (1,0):
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+        default:
+            print("Default")
+        }
+        
+    }
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
         
@@ -55,6 +69,8 @@ class NewSaleController: UITableViewController {
         default:
             print("Default")
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
         
     }
     

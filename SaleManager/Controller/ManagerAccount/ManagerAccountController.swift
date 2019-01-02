@@ -34,6 +34,7 @@ class ManagerAccountController: UITableViewController {
         
         fireBaseWorker.chartDB()
         chartView.contentMode = .scaleAspectFit
+        tableView.customeStule(tableView: self.tableView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,6 +61,10 @@ class ManagerAccountController: UITableViewController {
             cell.textLabel?.text = "Создать накладную"
         case (1,1):
             cell.textLabel?.text = "Список продаж"
+        case (1,2):
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+        case (2,0):
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
         default:
             print("Default")
         }
@@ -77,14 +82,14 @@ class ManagerAccountController: UITableViewController {
             transitionPushToViewController(name: "SalesListController")
         case (2,0):
             fireBaseWorker.signOut()
+            
         default:
             print("Default")
         }
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
-    
-    
-    
     
     // MARK: - Navigation
     
