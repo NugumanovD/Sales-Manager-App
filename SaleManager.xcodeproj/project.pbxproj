@@ -41,6 +41,8 @@
 		492BB14A21DBE0E500075915 /* ProductListForInvoiceCellCustome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BB14921DBE0E500075915 /* ProductListForInvoiceCellCustome.swift */; };
 		492BB14C21DBEE3A00075915 /* ProductListDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BB14B21DBEE3A00075915 /* ProductListDetailController.swift */; };
 		49A3653021DCF66E00C99C30 /* UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3652F21DCF66E00C99C30 /* UITableViewController.swift */; };
+		7B291BE521DD2FCA0020C126 /* ProductListForBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B291BE421DD2FCA0020C126 /* ProductListForBasket.swift */; };
+		7B291BE721DD41C00020C126 /* ProductListForBasketCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B291BE621DD41C00020C126 /* ProductListForBasketCustomCell.swift */; };
 		7B4BE9AB21D575C600259DC2 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BE9AA21D575C600259DC2 /* Mark.swift */; };
 		7B65EC0621CEB490005E913E /* ChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65EC0521CEB490005E913E /* ChartController.swift */; };
 		7B7E934F21D3A11300F96C85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E934E21D3A11300F96C85 /* GoogleService-Info.plist */; };
@@ -86,6 +88,8 @@
 		492BB14921DBE0E500075915 /* ProductListForInvoiceCellCustome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListForInvoiceCellCustome.swift; sourceTree = "<group>"; };
 		492BB14B21DBEE3A00075915 /* ProductListDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDetailController.swift; sourceTree = "<group>"; };
 		49A3652F21DCF66E00C99C30 /* UITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewController.swift; sourceTree = "<group>"; };
+		7B291BE421DD2FCA0020C126 /* ProductListForBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListForBasket.swift; sourceTree = "<group>"; };
+		7B291BE621DD41C00020C126 /* ProductListForBasketCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListForBasketCustomCell.swift; sourceTree = "<group>"; };
 		7B4BE9AA21D575C600259DC2 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
 		7B65EC0521CEB490005E913E /* ChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartController.swift; sourceTree = "<group>"; };
 		7B7E934E21D3A11300F96C85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				492BB14721DBCFA500075915 /* ProductListForInvoiceController.swift */,
 				492BB14921DBE0E500075915 /* ProductListForInvoiceCellCustome.swift */,
 				492BB14B21DBEE3A00075915 /* ProductListDetailController.swift */,
+				7B291BE421DD2FCA0020C126 /* ProductListForBasket.swift */,
+				7B291BE621DD41C00020C126 /* ProductListForBasketCustomCell.swift */,
 			);
 			path = NewSale;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				04B3732121C18796003B52C5 /* NewSaleController.swift in Sources */,
 				043403A721A9D9B700F7AAE1 /* ProductController.swift in Sources */,
 				0419273F21C2E137003CC11D /* Sales.swift in Sources */,
+				7B291BE521DD2FCA0020C126 /* ProductListForBasket.swift in Sources */,
 				043403A521A9D9B700F7AAE1 /* AppDelegate.swift in Sources */,
 				492BB14C21DBEE3A00075915 /* ProductListDetailController.swift in Sources */,
 				04B7589321BC5AD700ED98C7 /* AuthStoryboard.swift in Sources */,
@@ -445,6 +452,7 @@
 				7B4BE9AB21D575C600259DC2 /* Mark.swift in Sources */,
 				04501A6621B4324E000A0C18 /* NetWorker.swift in Sources */,
 				492BB14621DB98AE00075915 /* UINavigationController.swift in Sources */,
+				7B291BE721DD41C00020C126 /* ProductListForBasketCustomCell.swift in Sources */,
 				0412C53321C58C1500D1774E /* SalesListController.swift in Sources */,
 				04ED987D21BD76C4003488AC /* ManagerAccountController.swift in Sources */,
 				49A3653021DCF66E00C99C30 /* UITableViewController.swift in Sources */,

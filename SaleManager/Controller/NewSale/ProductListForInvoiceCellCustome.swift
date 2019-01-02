@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class nameProductListForInvoiceCellCustome: UITableViewCell {
+class NameProductListForInvoiceCellCustome: UITableViewCell {
     
     @IBOutlet var titel: UILabel!
     @IBOutlet var quantity: UILabel!

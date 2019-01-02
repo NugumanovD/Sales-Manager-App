@@ -27,7 +27,7 @@ class ProductListForInvoiceController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! nameProductListForInvoiceCellCustome
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NameProductListForInvoiceCellCustome
         cell.titel.text = worker.catalog[indexPath.row].titel
         cell.quantity.text = "\(worker.catalog[indexPath.row].quantity)"
         cell.price.text = worker.catalog[indexPath.row].price
