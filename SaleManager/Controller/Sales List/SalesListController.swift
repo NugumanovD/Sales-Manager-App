@@ -13,6 +13,7 @@ class SalesListController: UIViewController {
     
     // MARK: Interface outlets
     @IBOutlet var mainTable: UITableView!
+    @IBOutlet weak var filter: UIBarButtonItem!
     
     // MARK: Instance variables/constants
     let worker = FireBaseWorker()
@@ -23,10 +24,22 @@ class SalesListController: UIViewController {
         
         tabBarController?.tabBar.isHidden = true
         worker.getDataSales(tableView: mainTable)
+        
+        
+//        let button = UIButton(type: .custom)
+//        button.setImage(UIImage(named: "filter"), for: .normal)
+//        button.imageView?.contentMode = .scaleAspectFit
+//
+//        let barButton = UIBarButtonItem(customView: button)
+//        barButton.width = 1
+//        self.navigationItem.rightBarButtonItem = barButton
+        
     }
     
     //MARK: Action funcs
     
+    @IBAction func filterButton(_ sender: Any) {
+    }
     
     //MARK: public funcs
     

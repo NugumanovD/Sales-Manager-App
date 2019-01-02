@@ -34,6 +34,7 @@ class ManagerAccountController: UITableViewController {
         fireBaseWorker.chartDB()
         chartView.contentMode = .scaleAspectFit
         tableView.customeStule(tableView: self.tableView)
+        navigationItem.title = "Кабинет менеджера"
     }
     
     override func viewDidAppear(_ animated: Bool) {
