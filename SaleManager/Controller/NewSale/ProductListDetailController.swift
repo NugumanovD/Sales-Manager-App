@@ -9,37 +9,59 @@
 import Foundation
 import UIKit
 
-class ProductListDetailController: UIViewController {
+class ProductListDetailController: UITableViewController {
     
-    @IBOutlet var mainView: UIView!
+    // MARK: Type declarations
+    //struct/enum/class
     
-    //MARK: UIViewController lifecycle
+    // MARK: Class variables/constants
+    //static var/let
     
+    // MARK: Interface outlets
+    //@IBOutlets
+    
+    // MARK: Instance variables/constants
+    //let/var
+    
+    // MARK: Private instance variables/constants
+    //private let/var
+    
+    // MARK: class functions
+    //static func instantiateViewController() -> ViewController
+    
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainView.layer.cornerRadius = 5
-        
+        tableView.customeStule(tableView: self.tableView)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    //MARK: Configurations
+    //func configureUI()
+    
+    //MARK: private funcs
+    //private func myPrivateFunc()
+    
+    //MARK: Action funcs
+    @IBAction func done(_ sender: Any) {
+        navigationController?.dismiss(navigationController: self.navigationController!)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
+    //MARK: public funcs
+    //func myPublicFunc()
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-    }
+    //MARK: AnyProtocol (ex. UITableViewDelegate)
+    //func tableView(_ tableView: UITableView.....
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-    }
+    //MARK: Any other protocol
+    //func myFuncFromOtherProtocol()
+    
+    //MARK: Navigation
+    
+    
+    
+    
+    
+    
     
 }

@@ -13,17 +13,14 @@ class ProductListForInvoiceController: UITableViewController {
     
     let worker = FireBaseWorker()
     
-    //MARK: UIViewController lifecycle
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         worker.getDataCatalog(tableView: self.tableView)
+        tableView.customeStule(tableView: self.tableView)
     }
-    
-    
-    
-    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return worker.catalog.count
