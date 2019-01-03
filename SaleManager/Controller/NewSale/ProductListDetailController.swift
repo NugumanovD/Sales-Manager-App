@@ -22,6 +22,7 @@ class ProductListDetailController: UITableViewController {
     
     // MARK: Instance variables/constants
     //let/var
+    var itemArray = [MainBase]()
     
     // MARK: Private instance variables/constants
     //private let/var
@@ -34,7 +35,18 @@ class ProductListDetailController: UITableViewController {
         super.viewDidLoad()
         
         tableView.customeStule(tableView: self.tableView)
+        tableView.reloadData()
+        print(itemArray)
     }
+    
+   
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+         print(itemArray)
+    }
+    
     
     //MARK: Configurations
     //func configureUI()
@@ -52,6 +64,18 @@ class ProductListDetailController: UITableViewController {
     
     //MARK: AnyProtocol (ex. UITableViewDelegate)
     //func tableView(_ tableView: UITableView.....
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BasketCell", for: indexPath)
+        
+        cell.textLabel?.text = itemArray[indexPath.row].titel
+        
+        return cell
+    }
     
     //MARK: Any other protocol
     //func myFuncFromOtherProtocol()

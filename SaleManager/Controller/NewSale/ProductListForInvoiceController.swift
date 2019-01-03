@@ -12,7 +12,7 @@ import Foundation
 class ProductListForInvoiceController: UITableViewController {
     
     let worker = FireBaseWorker()
-    var itemArray = [String]()
+    var itemArray = [MainBase]()
     
     // MARK: Lifecycle
     
@@ -60,8 +60,8 @@ class ProductListForInvoiceController: UITableViewController {
                 cell.accessoryType = .none
             } else {
                 cell.accessoryType = .checkmark
-                print(worker.catalog[indexPath.row].titel)
-                itemArray.append(worker.catalog[indexPath.row].titel)
+                print(worker.catalog[indexPath.row])
+                itemArray.append(worker.catalog[indexPath.row])
                 
             }
         }
@@ -70,6 +70,9 @@ class ProductListForInvoiceController: UITableViewController {
     
     
     @IBAction func done(_ sender: Any) {
+        let array = ProductListDetailController()
+        array.itemArray = self.itemArray
+        print(itemArray)
         navigationController?.dismiss(navigationController: self.navigationController!)
     }
     
