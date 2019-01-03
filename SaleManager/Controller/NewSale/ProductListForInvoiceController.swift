@@ -12,6 +12,7 @@ import Foundation
 class ProductListForInvoiceController: UITableViewController {
     
     let worker = FireBaseWorker()
+    var itemArray = [String]()
     
     // MARK: Lifecycle
     
@@ -53,6 +54,17 @@ class ProductListForInvoiceController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        if let cell = tableView.cellForRow(at: indexPath) {
+            if cell.accessoryType == .checkmark {
+                cell.accessoryType = .none
+            } else {
+                cell.accessoryType = .checkmark
+                print(worker.catalog[indexPath.row].titel)
+                itemArray.append(worker.catalog[indexPath.row].titel)
+                
+            }
+        }
     }
     
     

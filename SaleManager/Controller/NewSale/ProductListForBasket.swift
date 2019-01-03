@@ -11,6 +11,7 @@ import UIKit
 class ProductListForBasket: UITableViewController {
     
     let worker = FireBaseWorker()
+    let testValue = ProductListForInvoiceController()
     
     // MARK: Lifecycle
     
@@ -20,14 +21,14 @@ class ProductListForBasket: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return testValue.itemArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasketCell", for: indexPath) as! ProductListForBasketCustomCell
 
         cell.basketImageView.image = UIImage(named: "shopping")
-
+        cell.basketTitleLabel.text = testValue.itemArray[indexPath.row]
         return cell
     }
     

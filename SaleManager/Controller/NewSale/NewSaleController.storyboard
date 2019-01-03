@@ -428,11 +428,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Список товара" id="k9s-cI-Zcp">
-                        <barButtonItem key="rightBarButtonItem" id="R7A-fB-FnG">
-                            <connections>
-                                <action selector="done:" destination="uUe-Ir-c2X" id="NiI-C0-1Q7"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem id="R7A-fB-FnG">
+                                <connections>
+                                    <action selector="done:" destination="uUe-Ir-c2X" id="NiI-C0-1Q7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Готово" id="Hfl-xl-ewt">
+                                <connections>
+                                    <action selector="done:" destination="uUe-Ir-c2X" id="29r-wi-8Up"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPp-ml-4Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -557,8 +564,7 @@
                     <navigationItem key="navigationItem" title="Корзина" id="5ql-ak-AKG">
                         <barButtonItem key="rightBarButtonItem" title="Добавить" id="8eb-Ty-wYu">
                             <connections>
-                                <action selector="done:" destination="uUe-Ir-c2X" id="uRb-kZ-Tc8"/>
-                                <segue destination="uUe-Ir-c2X" kind="show" id="TCd-MD-T8g"/>
+                                <segue destination="uUe-Ir-c2X" kind="show" id="bcN-MN-wlR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
