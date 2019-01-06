@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ProductListDetailController: UITableViewController {
+class ProductListDetailController: UITableViewController, CanRecieve {
     
     // MARK: Type declarations
     //struct/enum/class
@@ -48,7 +48,9 @@ class ProductListDetailController: UITableViewController {
     
     
     //MARK: Configurations
-    //func configureUI()
+    func recieveData(data: [MainBase]) {
+        itemArray = data
+    }
     
     //MARK: private funcs
     //private func myPrivateFunc()
@@ -81,7 +83,13 @@ class ProductListDetailController: UITableViewController {
     
     //MARK: Navigation
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Segue" {
+            let dvc = segue.destination as! ProductListForInvoiceController
+            dvc.delegate = self
+        }
+        
+    }
     
     
     

@@ -9,10 +9,15 @@
 import UIKit
 import Foundation
 
+protocol CanRecieve {
+    func recieveData(data: [MainBase])
+}
+
 class ProductListForInvoiceController: UITableViewController {
     
     let worker = FireBaseWorker()
     var itemArray = [MainBase]()
+    var delegate: CanRecieve?
     
     // MARK: Lifecycle
     
@@ -70,9 +75,7 @@ class ProductListForInvoiceController: UITableViewController {
     
     
     @IBAction func done(_ sender: Any) {
-        let array = ProductListDetailController()
-        array.itemArray = self.itemArray
-        print(itemArray)
+        delegate?.recieveData(data: itemArray)
         navigationController?.dismiss(navigationController: self.navigationController!)
     }
     

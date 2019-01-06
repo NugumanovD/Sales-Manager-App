@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="NewSaleController" id="NEQ-Iz-Pgf" customClass="NewSaleController" customModule="SaleManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="15" sectionFooterHeight="28" id="fIk-Sa-C68">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -564,7 +564,7 @@
                     <navigationItem key="navigationItem" title="Корзина" id="5ql-ak-AKG">
                         <barButtonItem key="rightBarButtonItem" title="Добавить" id="8eb-Ty-wYu">
                             <connections>
-                                <segue destination="uUe-Ir-c2X" kind="show" id="bcN-MN-wlR"/>
+                                <segue destination="uUe-Ir-c2X" kind="show" identifier="Segue" id="bcN-MN-wlR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
