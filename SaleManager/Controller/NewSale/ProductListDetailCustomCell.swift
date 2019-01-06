@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductListForBasketCustomCell: UITableViewCell {
+class ProductListDetailCustomCell: UITableViewCell {
     
     
     @IBOutlet weak var basketImageView: UIImageView!
@@ -26,7 +26,19 @@ class ProductListForBasketCustomCell: UITableViewCell {
         print("World")
     }
     
-    
+    func configureImage(dataImage: String) {
+        if let imageURL = URL(string: dataImage) {
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: imageURL)
+                if let data = data {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        self.basketImageView.image = image
+                    }
+                }
+            }
+        }
+    }
     
 }
 

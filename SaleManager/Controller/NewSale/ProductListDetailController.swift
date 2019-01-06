@@ -22,7 +22,7 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     
     // MARK: Instance variables/constants
     //let/var
-    var itemArray = [MainBase]()
+    var selectedProductList = [MainBase]()
     
     // MARK: Private instance variables/constants
     //private let/var
@@ -43,13 +43,13 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-         print(itemArray)
+         print(selectedProductList)
     }
     
     
     //MARK: Configurations
     func recieveData(data: [MainBase]) {
-        itemArray = data
+        selectedProductList = data
     }
     
     //MARK: private funcs
@@ -67,13 +67,16 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     //func tableView(_ tableView: UITableView.....
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemArray.count
+        return selectedProductList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BasketCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BasketCell", for: indexPath) as! ProductListDetailCustomCell
         
-        cell.textLabel?.text = itemArray[indexPath.row].titel
+//        cell.textLabel?.text = selectedProductList[indexPath.row].titel
+        cell.basketTitleLabel.text = selectedProductList[indexPath.row].titel
+        cell.basketPriceLabel.text = selectedProductList[indexPath.row].price
+        cell.configureImage(dataImage: selectedProductList[indexPath.row].image)
         
         return cell
     }
