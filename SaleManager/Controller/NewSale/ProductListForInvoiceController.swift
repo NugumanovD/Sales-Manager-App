@@ -60,7 +60,7 @@ class ProductListForInvoiceController: UITableViewController {
                 cell.accessoryType = .none
             } else {
                 cell.accessoryType = .checkmark
-                print(worker.catalog[indexPath.row])
+                print(worker.catalog[indexPath.row].titel)
                 itemArray.append(worker.catalog[indexPath.row])
                 
             }

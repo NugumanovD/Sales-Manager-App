@@ -18,7 +18,7 @@ class SalesListController: UIViewController {
     // MARK: Instance variables/constants
     let worker = FireBaseWorker()
     
-    // MARK: Lifecycle
+    //MARK: UIViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +37,6 @@ class SalesListController: UIViewController {
     }
     
     //MARK: Action funcs
-    
     @IBAction func filterButton(_ sender: Any) {
     }
     
@@ -50,8 +49,15 @@ class SalesListController: UIViewController {
 extension SalesListController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: AnyProtocol (ex. UITableViewDelegate)
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return worker.sales.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,4 +85,12 @@ extension SalesListController: UITableViewDataSource, UITableViewDelegate {
         return [delete,archive]
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "InformationSegue" {
+            if let indexPath = mainTable.indexPathForSelectedRow {
+            let dvc = segue.destination as! SalesInformationController
+                dvc.item = [worker.sales[indexPath.row]]
+            }
+            }
+    }
 }

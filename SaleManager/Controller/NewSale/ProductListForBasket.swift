@@ -29,7 +29,7 @@ class ProductListForBasket: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasketCell", for: indexPath) as! ProductListForBasketCustomCell
 
         cell.basketImageView.image = UIImage(named: "shopping")
-        cell.basketTitleLabel.text = testValue.itemArray[indexPath.row]
+        cell.basketTitleLabel.text = testValue.itemArray[indexPath.row].titel
         return cell
     }
     

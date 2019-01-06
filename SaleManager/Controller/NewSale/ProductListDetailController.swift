@@ -35,8 +35,7 @@ class ProductListDetailController: UITableViewController {
         super.viewDidLoad()
         
         tableView.customeStule(tableView: self.tableView)
-        tableView.reloadData()
-        print(itemArray)
+       
     }
     
    

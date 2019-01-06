@@ -41,6 +41,8 @@
 		492BB14A21DBE0E500075915 /* ProductListForInvoiceCellCustome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BB14921DBE0E500075915 /* ProductListForInvoiceCellCustome.swift */; };
 		492BB14C21DBEE3A00075915 /* ProductListDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492BB14B21DBEE3A00075915 /* ProductListDetailController.swift */; };
 		49A3653021DCF66E00C99C30 /* UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3652F21DCF66E00C99C30 /* UITableViewController.swift */; };
+		49D8190E21E1111600E7386F /* SalesFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8190D21E1111600E7386F /* SalesFilterController.swift */; };
+		49D8191021E117BF00E7386F /* SalesInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8190F21E117BF00E7386F /* SalesInformationController.swift */; };
 		7B291BE521DD2FCA0020C126 /* ProductListForBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B291BE421DD2FCA0020C126 /* ProductListForBasket.swift */; };
 		7B291BE721DD41C00020C126 /* ProductListForBasketCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B291BE621DD41C00020C126 /* ProductListForBasketCustomCell.swift */; };
 		7B4BE9AB21D575C600259DC2 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BE9AA21D575C600259DC2 /* Mark.swift */; };
@@ -88,6 +90,8 @@
 		492BB14921DBE0E500075915 /* ProductListForInvoiceCellCustome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListForInvoiceCellCustome.swift; sourceTree = "<group>"; };
 		492BB14B21DBEE3A00075915 /* ProductListDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDetailController.swift; sourceTree = "<group>"; };
 		49A3652F21DCF66E00C99C30 /* UITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewController.swift; sourceTree = "<group>"; };
+		49D8190D21E1111600E7386F /* SalesFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesFilterController.swift; sourceTree = "<group>"; };
+		49D8190F21E117BF00E7386F /* SalesInformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesInformationController.swift; sourceTree = "<group>"; };
 		7B291BE421DD2FCA0020C126 /* ProductListForBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListForBasket.swift; sourceTree = "<group>"; };
 		7B291BE621DD41C00020C126 /* ProductListForBasketCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListForBasketCustomCell.swift; sourceTree = "<group>"; };
 		7B4BE9AA21D575C600259DC2 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				0412C53221C58C1500D1774E /* SalesListController.swift */,
+				49D8190F21E117BF00E7386F /* SalesInformationController.swift */,
+				49D8190D21E1111600E7386F /* SalesFilterController.swift */,
 				0412C53421C58C2600D1774E /* SalesListController.storyboard */,
 			);
 			path = "Sales List";
@@ -441,12 +447,14 @@
 				0419273F21C2E137003CC11D /* Sales.swift in Sources */,
 				7B291BE521DD2FCA0020C126 /* ProductListForBasket.swift in Sources */,
 				043403A521A9D9B700F7AAE1 /* AppDelegate.swift in Sources */,
+				49D8191021E117BF00E7386F /* SalesInformationController.swift in Sources */,
 				492BB14C21DBEE3A00075915 /* ProductListDetailController.swift in Sources */,
 				04B7589321BC5AD700ED98C7 /* AuthStoryboard.swift in Sources */,
 				04B7588821BC423A00ED98C7 /* MainBase.swift in Sources */,
 				7BF6D7A621C7CC6300723AB0 /* UIViewController.swift in Sources */,
 				0427342621BD4BA6004B1FCC /* Status.swift in Sources */,
 				04501A6221B431D0000A0C18 /* LoginViewController.swift in Sources */,
+				49D8190E21E1111600E7386F /* SalesFilterController.swift in Sources */,
 				492BB14821DBCFA500075915 /* ProductListForInvoiceController.swift in Sources */,
 				492BB14421DB6A4300075915 /* Controller.swift in Sources */,
 				7B4BE9AB21D575C600259DC2 /* Mark.swift in Sources */,
@@ -608,7 +616,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5P369B9Z7K;
+				DEVELOPMENT_TEAM = T43MEX2BM7;
 				INFOPLIST_FILE = "$(SRCROOT)/SaleManager/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -627,7 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5P369B9Z7K;
+				DEVELOPMENT_TEAM = T43MEX2BM7;
 				INFOPLIST_FILE = "$(SRCROOT)/SaleManager/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

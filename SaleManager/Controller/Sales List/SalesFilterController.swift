@@ -8,21 +8,30 @@
 
 import UIKit
 
-class FilretController: UITableViewController {
+class SalesFilterController: UITableViewController {
     
+    
+    //MARK: UIViewController lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        tableView.customeStule(tableView: self.tableView)
+        
+    }
+    
+    //MARK: AnyProtocol (ex. UITableViewDelegate)
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
         case 0:
-            cell.textLabel?.text = "Создать накладную"
+            cell.textLabel?.text = "Активные"
         case 1:
-            cell.textLabel?.text = "Список продаж"
+            cell.textLabel?.text = "Архив"
         default:
             break
         }
         
     }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
