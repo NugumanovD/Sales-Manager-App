@@ -15,7 +15,7 @@ class SalesInformationController: UITableViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var deliveryLabel: UILabel!
-    @IBOutlet weak var itemsTableView: SalesItemsTableView!
+
     
     // MARK: Instance variables/constants
     var item = [Sales]()
