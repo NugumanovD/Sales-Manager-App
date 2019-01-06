@@ -62,7 +62,7 @@ class ProductListForInvoiceController: UITableViewController {
                 cell.accessoryType = .checkmark
                 print(worker.catalog[indexPath.row].titel)
                 itemArray.append(worker.catalog[indexPath.row].titel)
-                
+                print("Hello")
             }
         }
     }
