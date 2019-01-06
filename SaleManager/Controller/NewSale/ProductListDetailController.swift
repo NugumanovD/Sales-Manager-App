@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ProductListDetailController: UITableViewController {
+class ProductListDetailController: UITableViewController, CanRecieve {
     
     // MARK: Type declarations
     //struct/enum/class
@@ -22,6 +22,7 @@ class ProductListDetailController: UITableViewController {
     
     // MARK: Instance variables/constants
     //let/var
+    var selectedProductList = [MainBase]()
     
     // MARK: Private instance variables/constants
     //private let/var
@@ -34,10 +35,22 @@ class ProductListDetailController: UITableViewController {
         super.viewDidLoad()
         
         tableView.customeStule(tableView: self.tableView)
+       
     }
     
+   
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+         print(selectedProductList)
+    }
+    
+    
     //MARK: Configurations
-    //func configureUI()
+    func recieveData(data: [MainBase]) {
+        selectedProductList = data
+    }
     
     //MARK: private funcs
     //private func myPrivateFunc()
@@ -53,12 +66,33 @@ class ProductListDetailController: UITableViewController {
     //MARK: AnyProtocol (ex. UITableViewDelegate)
     //func tableView(_ tableView: UITableView.....
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return selectedProductList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BasketCell", for: indexPath) as! ProductListDetailCustomCell
+        
+//        cell.textLabel?.text = selectedProductList[indexPath.row].titel
+        cell.basketTitleLabel.text = selectedProductList[indexPath.row].titel
+        cell.basketPriceLabel.text = selectedProductList[indexPath.row].price
+        cell.configureImage(dataImage: selectedProductList[indexPath.row].image)
+        
+        return cell
+    }
+    
     //MARK: Any other protocol
     //func myFuncFromOtherProtocol()
     
     //MARK: Navigation
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Segue" {
+            let dvc = segue.destination as! ProductListForInvoiceController
+            dvc.delegate = self
+        }
+        
+    }
     
     
     

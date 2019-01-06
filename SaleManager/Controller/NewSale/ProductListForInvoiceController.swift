@@ -9,10 +9,15 @@
 import UIKit
 import Foundation
 
+protocol CanRecieve {
+    func recieveData(data: [MainBase])
+}
+
 class ProductListForInvoiceController: UITableViewController {
     
     let worker = FireBaseWorker()
-    var itemArray = [String]()
+    var itemArray = [MainBase]()
+    var delegate: CanRecieve?
     
     // MARK: Lifecycle
     
@@ -32,21 +37,8 @@ class ProductListForInvoiceController: UITableViewController {
         cell.titel.text = worker.catalog[indexPath.row].titel
         cell.quantity.text = "\(worker.catalog[indexPath.row].quantity)"
         cell.price.text = worker.catalog[indexPath.row].price
-        
+        cell.configureImage(dataImage: worker.catalog[indexPath.row].image)
         cell.count.isHidden = true
-        
-        if let imageURL = URL(string: worker.catalog[indexPath.row].image) {
-            DispatchQueue.global().async {
-                let data = try? Data(contentsOf: imageURL)
-                if let data = data {
-                    let image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        cell.imageProduct.image = image
-                        
-                    }
-                }
-            }
-        }
         
         return cell
     }
@@ -61,17 +53,15 @@ class ProductListForInvoiceController: UITableViewController {
             } else {
                 cell.accessoryType = .checkmark
                 print(worker.catalog[indexPath.row].titel)
-                itemArray.append(worker.catalog[indexPath.row].titel)
-                print("Hello")
+
+                itemArray.append(worker.catalog[indexPath.row])
             }
         }
     }
     
-    
-    
     @IBAction func done(_ sender: Any) {
+        delegate?.recieveData(data: itemArray)
         navigationController?.dismiss(navigationController: self.navigationController!)
     }
-    
     
 }
