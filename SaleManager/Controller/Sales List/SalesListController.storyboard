@@ -232,7 +232,23 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y1g-Cx-7We" id="RUc-Vm-ghh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zMF-Po-9AO" customClass="SalesItemsTableView" customModule="SaleManager" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="Noe-nS-owj" id="GfZ-xg-UDw"/>
+                                                        <outlet property="delegate" destination="Noe-nS-owj" id="ojh-xy-wNp"/>
+                                                    </connections>
+                                                </tableView>
+                                            </subviews>
                                             <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="zMF-Po-9AO" secondAttribute="bottom" id="BFG-ZD-0eB"/>
+                                                <constraint firstItem="zMF-Po-9AO" firstAttribute="leading" secondItem="RUc-Vm-ghh" secondAttribute="leading" id="OAQ-5f-XwX"/>
+                                                <constraint firstAttribute="trailing" secondItem="zMF-Po-9AO" secondAttribute="trailing" id="Pn9-Ig-uiB"/>
+                                                <constraint firstItem="zMF-Po-9AO" firstAttribute="top" secondItem="RUc-Vm-ghh" secondAttribute="top" id="R2F-t7-3W0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -270,6 +286,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="UUf-Dm-GTH" id="m6s-xR-HRB"/>
                         <outlet property="deliveryLabel" destination="jsr-eC-HQX" id="jNO-EZ-KCu"/>
+                        <outlet property="itemsTableView" destination="zMF-Po-9AO" id="lQ6-qn-BqS"/>
                         <outlet property="nameLabel" destination="8G3-ck-wcf" id="fg1-uk-bIh"/>
                         <outlet property="numberLabel" destination="nor-pN-1TS" id="9EJ-I2-oi0"/>
                     </connections>

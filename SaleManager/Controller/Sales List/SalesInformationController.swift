@@ -15,6 +15,7 @@ class SalesInformationController: UITableViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var deliveryLabel: UILabel!
+    @IBOutlet weak var itemsTableView: SalesItemsTableView!
     
     // MARK: Instance variables/constants
     var item = [Sales]()
@@ -80,27 +81,12 @@ class SalesInformationController: UITableViewController {
     func heightCell() -> Int {
         var height = 44
         if let count = item.first?.items.count {
-            height = count * 44
+            height = count * 44 * 3
         }
         return height
        
     }
     
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        switch section {
-//        case 0:
-//            return 3
-//        case 1:
-//            return 2
-//        case 2:
-//            return 1
-//        default:
-//            return 1
-//        }
-//    }
-    
    
-    
 
-    
 }

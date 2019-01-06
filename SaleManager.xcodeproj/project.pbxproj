@@ -43,6 +43,7 @@
 		49A3653021DCF66E00C99C30 /* UITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A3652F21DCF66E00C99C30 /* UITableViewController.swift */; };
 		49D8190E21E1111600E7386F /* SalesFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8190D21E1111600E7386F /* SalesFilterController.swift */; };
 		49D8191021E117BF00E7386F /* SalesInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D8190F21E117BF00E7386F /* SalesInformationController.swift */; };
+		49E48A5D21E270F000A4E5F0 /* SalesItemsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E48A5C21E270F000A4E5F0 /* SalesItemsTableView.swift */; };
 		7B291BE521DD2FCA0020C126 /* ProductListForBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B291BE421DD2FCA0020C126 /* ProductListForBasket.swift */; };
 		7B291BE721DD41C00020C126 /* ProductListForBasketCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B291BE621DD41C00020C126 /* ProductListForBasketCustomCell.swift */; };
 		7B4BE9AB21D575C600259DC2 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BE9AA21D575C600259DC2 /* Mark.swift */; };
@@ -92,6 +93,7 @@
 		49A3652F21DCF66E00C99C30 /* UITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewController.swift; sourceTree = "<group>"; };
 		49D8190D21E1111600E7386F /* SalesFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesFilterController.swift; sourceTree = "<group>"; };
 		49D8190F21E117BF00E7386F /* SalesInformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesInformationController.swift; sourceTree = "<group>"; };
+		49E48A5C21E270F000A4E5F0 /* SalesItemsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesItemsTableView.swift; sourceTree = "<group>"; };
 		7B291BE421DD2FCA0020C126 /* ProductListForBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListForBasket.swift; sourceTree = "<group>"; };
 		7B291BE621DD41C00020C126 /* ProductListForBasketCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListForBasketCustomCell.swift; sourceTree = "<group>"; };
 		7B4BE9AA21D575C600259DC2 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				49D8190F21E117BF00E7386F /* SalesInformationController.swift */,
 				49D8190D21E1111600E7386F /* SalesFilterController.swift */,
 				0412C53421C58C2600D1774E /* SalesListController.storyboard */,
+				49E48A5C21E270F000A4E5F0 /* SalesItemsTableView.swift */,
 			);
 			path = "Sales List";
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				0427342621BD4BA6004B1FCC /* Status.swift in Sources */,
 				04501A6221B431D0000A0C18 /* LoginViewController.swift in Sources */,
 				49D8190E21E1111600E7386F /* SalesFilterController.swift in Sources */,
+				49E48A5D21E270F000A4E5F0 /* SalesItemsTableView.swift in Sources */,
 				492BB14821DBCFA500075915 /* ProductListForInvoiceController.swift in Sources */,
 				492BB14421DB6A4300075915 /* Controller.swift in Sources */,
 				7B4BE9AB21D575C600259DC2 /* Mark.swift in Sources */,
