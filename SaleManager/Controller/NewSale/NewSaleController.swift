@@ -33,7 +33,7 @@ class NewSaleController: UITableViewController {
         super.viewDidLoad()
         
         tabBarController?.tabBar.isHidden = true
-        tableView.customeStule(tableView: self.tableView)
+        tableView.customeStule(self.tableView)
        
     }
     
@@ -65,7 +65,7 @@ class NewSaleController: UITableViewController {
         case (1,0):
             //TODO: Verification
             worker.saveDataSales(surname: surnameField.text!, name: nameField.text!, tel: telField.text!, post: postField.text!)
-            navigationController?.dismiss(navigationController: self.navigationController!)
+            navigationController?.dismiss(self.navigationController!)
         default:
             print("Default")
         }

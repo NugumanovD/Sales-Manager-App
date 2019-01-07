@@ -34,7 +34,7 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.customeStule(tableView: self.tableView)
+        tableView.customeStule(self.tableView)
        
     }
     
@@ -57,7 +57,7 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     
     //MARK: Action funcs
     @IBAction func done(_ sender: Any) {
-        navigationController?.dismiss(navigationController: self.navigationController!)
+        navigationController?.dismiss(self.navigationController!)
     }
     
     //MARK: public funcs

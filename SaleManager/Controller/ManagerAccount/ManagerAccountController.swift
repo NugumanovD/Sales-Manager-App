@@ -18,6 +18,7 @@ class ManagerAccountController: UITableViewController {
     @IBOutlet weak var chartView: BarChartView!
     
     // MARK: Instance variables/constants
+    //let navigation = UINavigationController()
     let fireBaseWorker = FireBaseWorker()
     let chart = ChartController()
     
@@ -34,8 +35,16 @@ class ManagerAccountController: UITableViewController {
         
         fireBaseWorker.chartDB()
         chartView.contentMode = .scaleAspectFit
-        tableView.customeStule(tableView: self.tableView)
+        tableView.customeStule(self.tableView)
+        
+        //Black style navigation
+        let backItem = UIBarButtonItem()
+        backItem.title = " "
+        navigationItem.backBarButtonItem = backItem
         navigationItem.title = "Кабинет менеджера"
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     override func viewDidAppear(_ animated: Bool) {

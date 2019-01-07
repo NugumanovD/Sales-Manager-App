@@ -25,7 +25,7 @@ class ProductListForInvoiceController: UITableViewController {
         super.viewDidLoad()
         
         worker.getDataCatalog(tableView: self.tableView)
-        tableView.customeStule(tableView: self.tableView)
+        tableView.customeStule(self.tableView)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,7 +61,7 @@ class ProductListForInvoiceController: UITableViewController {
     
     @IBAction func done(_ sender: Any) {
         delegate?.recieveData(data: itemArray)
-        navigationController?.dismiss(navigationController: self.navigationController!)
+        navigationController?.dismiss(self.navigationController!)
     }
     
 }

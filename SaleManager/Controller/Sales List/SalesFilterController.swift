@@ -15,7 +15,7 @@ class SalesFilterController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        tableView.customeStule(tableView: self.tableView)
+        tableView.customeStule(self.tableView)
         
     }
     
