@@ -35,9 +35,10 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.customeStule(tableView: self.tableView)
-        
-        
+
+        tableView.customeStule(self.tableView)
+       
+
     }
     
    override func viewWillAppear(_ animated: Bool) {
@@ -56,8 +57,9 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     
     //MARK: Action funcs
     @IBAction func done(_ sender: Any) {
-        navigationController?.dismiss(navigationController: self.navigationController!)
-        
+
+        navigationController?.dismiss(self.navigationController!)
+
     }
     
     //MARK: public funcs

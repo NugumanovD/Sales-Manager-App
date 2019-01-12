@@ -15,6 +15,7 @@ class SalesInformationController: UITableViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var deliveryLabel: UILabel!
+
     
     // MARK: Instance variables/constants
     var item = [Sales]()
@@ -23,33 +24,13 @@ class SalesInformationController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
   
-        tableView.customeStule(tableView: tableView)
+        tableView.customeStule(self.tableView)
         
         nameLabel.text = item.first?.name
         numberLabel.text = item.first?.tel
         cityLabel.text = item.first?.city
         deliveryLabel.text = item.first?.post
 
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
     }
     
     
@@ -78,29 +59,12 @@ class SalesInformationController: UITableViewController {
     }
 
     func heightCell() -> Int {
-        var height = 44
-        if let count = item.first?.items.count {
-            height = count * 44
-        }
+        let height = 44
+        
         return height
        
     }
     
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        switch section {
-//        case 0:
-//            return 3
-//        case 1:
-//            return 2
-//        case 2:
-//            return 1
-//        default:
-//            return 1
-//        }
-//    }
-    
    
-    
 
-    
 }
