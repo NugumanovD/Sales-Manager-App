@@ -18,9 +18,13 @@ class SalesListController: UIViewController {
     // MARK: Instance variables/constants
     let worker = FireBaseWorker()
     
+    
     //MARK: UIViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
         
         tabBarController?.tabBar.isHidden = true
         worker.getDataSales(tableView: mainTable)
@@ -52,9 +56,10 @@ extension SalesListController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SalesListCellCustome
         
-        cell.textLabel?.text = worker.sales[indexPath.row].name
+        cell.invoiceNumber.text = "\(worker.sales[indexPath.row].invoiceNumber)"
+        cell.city.text = worker.sales[indexPath.row].city
         
         return cell
     }
@@ -83,5 +88,12 @@ extension SalesListController: UITableViewDataSource, UITableViewDelegate {
                 dvc.item = [worker.sales[indexPath.row]]
             }
             }
+    }
+    
+    func orderedSet<T: Hashable>(array: Array<T>) -> Array<T> {
+        var unique = Set<T>()
+        return array.filter { element in
+            return unique.insert(element).inserted
+        }
     }
 }
