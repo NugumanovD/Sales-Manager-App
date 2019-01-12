@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
+
 class ProductListDetailController: UITableViewController, CanRecieve {
     
-    // MARK: Type declarations
+     // MARK: Type declarations
     //struct/enum/class
     
     // MARK: Class variables/constants
@@ -23,6 +24,7 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     // MARK: Instance variables/constants
     //let/var
     var selectedProductList = [MainBase]()
+
     
     // MARK: Private instance variables/constants
     //private let/var
@@ -33,19 +35,16 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.customeStule(tableView: self.tableView)
-       
+        
+        
     }
     
-   
-    
-    override func viewWillAppear(_ animated: Bool) {
+   override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
          print(selectedProductList)
     }
-    
     
     //MARK: Configurations
     func recieveData(data: [MainBase]) {
@@ -58,6 +57,7 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     //MARK: Action funcs
     @IBAction func done(_ sender: Any) {
         navigationController?.dismiss(navigationController: self.navigationController!)
+        
     }
     
     //MARK: public funcs
@@ -73,10 +73,12 @@ class ProductListDetailController: UITableViewController, CanRecieve {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasketCell", for: indexPath) as! ProductListDetailCustomCell
         
-//        cell.textLabel?.text = selectedProductList[indexPath.row].titel
-        cell.basketTitleLabel.text = selectedProductList[indexPath.row].titel
-        cell.basketPriceLabel.text = selectedProductList[indexPath.row].price
+        cell.configureTitle(data: selectedProductList[indexPath.row].titel)
         cell.configureImage(dataImage: selectedProductList[indexPath.row].image)
+        cell.configureBasketPrice(data: selectedProductList[indexPath.row].price)
+        cell.configureQuantity(data: selectedProductList[indexPath.row].quantity)
+        cell.countMinus(data: selectedProductList[indexPath.row].quantity)
+        cell.countPlus(data: selectedProductList[indexPath.row].quantity)
         
         return cell
     }
@@ -91,6 +93,7 @@ class ProductListDetailController: UITableViewController, CanRecieve {
             let dvc = segue.destination as! ProductListForInvoiceController
             dvc.delegate = self
         }
+        
         
     }
     

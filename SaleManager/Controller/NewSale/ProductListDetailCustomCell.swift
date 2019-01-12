@@ -8,37 +8,86 @@
 
 import UIKit
 
+
+
 class ProductListDetailCustomCell: UITableViewCell {
     
+    @IBOutlet private var basketImageView: UIImageView!
+    @IBOutlet private var basketTitleLabel: UILabel!
+    @IBOutlet private var basketCountLabel: UILabel!
+    @IBOutlet private var inStockLabel: UILabel!
+    @IBOutlet private var basketPriceLabel: UILabel!
+    @IBOutlet private var basketCountPlusButton: UIButton!
+    @IBOutlet weak var basketCountMinusButton: UIButton!
     
-    @IBOutlet weak var basketImageView: UIImageView!
-    @IBOutlet weak var basketTitleLabel: UILabel!
-    @IBOutlet weak var basketCountLabel: UILabel!
+    var countLabel = 1
     
-    @IBOutlet weak var basketPriceLabel: UILabel!
+    func configureTitle(data: String) {
+        basketTitleLabel.text = data
+    }
+    
+    func configureBasketPrice(data: String) {
+        basketPriceLabel.text = data
+    }
+    
+    func configureQuantity(data: Int) {
+        inStockLabel.text = String(data)
+        
+    }
+    
+    func configureImage(dataImage: String) {
+        guard let imageURL = URL(string: dataImage) else { return }
+        DispatchQueue.global().async {
+            guard let data = try? Data(contentsOf: imageURL) else { return }
+            let image = UIImage(data: data)
+            DispatchQueue.main.async {
+                self.basketImageView.image = image
+            }
+        }
+    }
+    
     
     
     @IBAction func basketCountPlusButtonTapped(_ sender: UIButton) {
         print("Hello")
+        
+        countPlus(data: countLabel)
     }
     
     @IBAction func basketCountMinusButtonTapped(_ sender: UIButton) {
         print("World")
+        
+        countMinus(data: countLabel)
     }
     
-    func configureImage(dataImage: String) {
-        if let imageURL = URL(string: dataImage) {
-            DispatchQueue.global().async {
-                let data = try? Data(contentsOf: imageURL)
-                if let data = data {
-                    let image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        self.basketImageView.image = image
-                    }
-                }
-            }
+    
+    func countMinus(data: Int) {
+        if basketCountLabel.text == "1" || basketCountLabel.text == "0" {
+            basketCountMinusButton.isHidden = true
+            
+        }
+        
+       countLabel -= 1
+        
+        print(countLabel)
+        DispatchQueue.main.async {
+            self.basketCountLabel.text = String(self.countLabel)
+            
+        }
+        
+    }
+    
+    func countPlus(data: Int) {
+        countLabel += 1
+        basketCountMinusButton.isHidden = false
+        print(countLabel)
+        DispatchQueue.main.async {
+            self.basketCountLabel.text = String(self.countLabel)
         }
     }
+    
+    
+    
     
 }
 

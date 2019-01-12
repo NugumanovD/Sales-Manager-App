@@ -11,27 +11,36 @@ import UIKit
 
 class NameProductListForInvoiceCellCustome: UITableViewCell {
     
-    @IBOutlet var titel: UILabel!
-    @IBOutlet var quantity: UILabel!
-    @IBOutlet var price: UILabel!
-    @IBOutlet var imageProduct: UIImageView!
-    
+    @IBOutlet private var titel: UILabel!
+    @IBOutlet private var quantity: UILabel!
+    @IBOutlet private var price: UILabel!
+    @IBOutlet private var imageProduct: UIImageView!
     @IBOutlet weak var addProduct: UIButton!
     @IBOutlet weak var count: UILabel!
     
+    
+    func configureTitle(data: String) {
+        titel.text = data
+    }
+    
+    func configureQuantity(data: Int) {
+        quantity.text = String(data)
+    }
+    
+    func configurePrice(data: String) {
+        price.text = data
+    }
+    
     func configureImage(dataImage: String) {
-        if let imageURL = URL(string: dataImage) {
-            DispatchQueue.global().async {
-                let data = try? Data(contentsOf: imageURL)
-                if let data = data {
-                    let image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        self.imageProduct.image = image
-                        
-                    }
-                }
+        guard let imageURL = URL(string: dataImage) else { return }
+        DispatchQueue.global().async {
+            guard let data = try? Data(contentsOf: imageURL) else { return }
+            let image = UIImage(data: data)
+            DispatchQueue.main.async {
+                self.imageProduct.image = image
             }
         }
     }
+    
     
 }

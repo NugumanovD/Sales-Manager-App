@@ -34,11 +34,13 @@ class ProductListForInvoiceController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NameProductListForInvoiceCellCustome
-        cell.titel.text = worker.catalog[indexPath.row].titel
-        cell.quantity.text = "\(worker.catalog[indexPath.row].quantity)"
-        cell.price.text = worker.catalog[indexPath.row].price
+        
+        cell.configureTitle(data: worker.catalog[indexPath.row].titel)
+        cell.configureQuantity(data: worker.catalog[indexPath.row].quantity)
+        cell.configurePrice(data: worker.catalog[indexPath.row].price)
         cell.configureImage(dataImage: worker.catalog[indexPath.row].image)
-        cell.count.isHidden = true
+
+//        cell.count.isHidden = false
         
         return cell
     }
