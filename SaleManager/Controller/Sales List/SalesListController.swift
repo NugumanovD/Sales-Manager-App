@@ -17,14 +17,12 @@ class SalesListController: UIViewController {
     
     // MARK: Instance variables/constants
     let worker = FireBaseWorker()
+    //var sections = [TableSection<Int, Sales>]()
     
     
     //MARK: UIViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        
         
         tabBarController?.tabBar.isHidden = true
         worker.getDataSales(tableView: mainTable)
@@ -37,29 +35,35 @@ class SalesListController: UIViewController {
     
     //MARK: public funcs
     
-  
-    
 }
 
 extension SalesListController: UITableViewDataSource, UITableViewDelegate {
     
-    //MARK: AnyProtocol (ex. UITableViewDelegate)
+    // MARK: - Table view data source
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return worker.sections.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let section = worker.sections[section]
+        let invoiceNumber = section.sectionItem
+        return "Накладная №\(invoiceNumber)"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return worker.sales.count
-        
+        let section = worker.sections[section]
+        return section.rowItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SalesListCellCustome
+        let section = worker.sections[indexPath.section]
+        let headline = section.rowItems[indexPath.row]
         
-        cell.invoiceNumber.text = "\(worker.sales[indexPath.row].invoiceNumber)"
-        cell.city.text = worker.sales[indexPath.row].city
+        cell.invoiceNumber.text = "\(headline.invoiceNumber)"
+        cell.city.text = headline.city
         
         return cell
     }
@@ -81,19 +85,20 @@ extension SalesListController: UITableViewDataSource, UITableViewDelegate {
         return [delete,archive]
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let indexPath = indexPath
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "InformationSegue" {
             if let indexPath = mainTable.indexPathForSelectedRow {
-            let dvc = segue.destination as! SalesInformationController
+                let dvc = segue.destination as! SalesInformationController
                 dvc.item = [worker.sales[indexPath.row]]
             }
-            }
-    }
-    
-    func orderedSet<T: Hashable>(array: Array<T>) -> Array<T> {
-        var unique = Set<T>()
-        return array.filter { element in
-            return unique.insert(element).inserted
         }
     }
 }
